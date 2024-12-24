@@ -7,13 +7,19 @@
 </head>
 <body>
     <H1>반복문을 사용한 구구단 연습</H1>
+    출력할 단수: <input type="text" id="num"><br>
+    <button onclick="runGugudan()">확인</button>
+    
     <script>
-        var strN = prompt("몇단을 출력할까요?");
-        var n = Number(strN);
-        document.write("<h2>구구단" + n + "단</h2>");
-        for (var i = 1; i <= 9; i++) {
-            document.write(n + " * " + i + " = " + n*i + "<br>")
-        }       
+        function runGugudan() {
+            var strN = document.getElementById("num").value;
+            var n = Number(strN)
+            document.write("<h2>구구단" + n + "단</h2>");
+            for (var i = 1; i <= 9; i++) {
+                document.write(n + " * " + i + " = " + n*i + "<br>")
+            }       
+        }
+       
       
     </script>
 </body>
